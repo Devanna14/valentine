@@ -24,7 +24,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: #0c0c0c; /* Fondo claro en móviles */
+    background-color: #dbdbdb; /* Fondo claro en móviles */
     cursor: url('images/cursor.png') 16 16, auto;
 }
 
@@ -49,7 +49,7 @@ header {
 
     box-shadow: 0 5px 10px rgba(0,0,0,0.15); /* Sombra sutil para dar profundidad */
     padding: 20px;
-    margin: 10px 0;
+    margin: 0px 0;
 
 }
 
@@ -166,6 +166,67 @@ button {
  border-bottom: 5px solid black; /* Hacer los bordes más pequeños */
  border-right: 2px solid black; /* Hacer los bordes más pequeños */
  border-top: 2px solid black; /* Hacer los bordes más pequeños */
+}
+
+.ticket {
+ width: 100vw; /* Ocupa todo el ancho de la ventana */
+ height: 100vh; /* Ocupa toda la altura de la ventana */
+ background: linear-gradient(to bottom, #474747, #161312);
+ border-radius: 0;
+ box-shadow: none;
+ color: #fff;
+ padding: 20px;
+ overflow: hidden;
+ font-size: 16px;
+ text-align: center;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 1000; /* Asegura que el ticket esté encima de otros elementos */
+ display: none; /* Inicialmente oculto */
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.ticket-header h1 {
+ font-size: 3rem;
+ margin-bottom: 10px;
+}
+
+.ticket-subtitle {
+ font-size: 1.5rem;
+ font-weight: 400;
+ color: rgba(255, 255, 255, 0.8);
+}
+
+.ticket-body {
+ margin-top: 20px;
+ padding: 15px;
+ background-color: rgba(0, 0, 0, 0.2);
+ border-radius: 10px;
+ box-sizing: border-box;
+}
+
+.ticket-info p {
+ margin: 8px 0;
+}
+
+.ticket-barcode {
+ margin-top: 15px;
+}
+
+.ticket-barcode img {
+ width: 100%;
+ max-width: 250px;
+ height: auto;
+}
+
+.ticket-footer {
+ margin-top: 20px;
+ font-size: 1rem;
+ font-weight: 300;
+ color: rgba(255, 255, 255, 0.7);
 }
 
 

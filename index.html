@@ -13,7 +13,7 @@
   <h2>Edición especial de <span>San Valentín</span></h2>
  </header>
  <section class="section1">
-  <h1>Eres <br>mi persona <br><span>Elegida!</span>
+  <h1>Mi sentido aracnido dice que eres <br>mi persona <br><span>Elegida!</span>
    <img src="images/spiderman01.png">
   </h1>
  </section>
@@ -26,12 +26,32 @@
  </section>
  <section class="section-option">
   <h3>¿Quieres ser mi <span>valentine</span>? <img src="images/spiderman02.png"></h3>
-  <button class="btnSi">Si!</button>
+  <button id="btnSi" class="btnSi">Si!</button>
   <button class="btnNo">No!</button>
  </section>
- <footer>
 
- </footer>
+  <!-- El contenedor del ticket (inicialmente oculto) -->
+  <div id="ticketContainer" class="ticket" style="display: none;">
+   <div class="ticket-header">
+       <h1>¡Muchas Gracias!</h1>
+       <p class="ticket-subtitle">Te ganaste una invitación</p>
+   </div>
+   <div class="ticket-body">
+       <div class="ticket-info">
+           <p><strong>Fecha:</strong> 15 de Febrero 2025</p>
+           <p><strong>Hora:</strong> 7:00 PM</p>
+           <p><strong>Lugar:</strong> INFLACITY</p>
+       </div>
+       <div class="ticket-barcode">
+           <img src="https://imgs.search.brave.com/2-z_6mZ9eckaf2_ZGvMvWsXwxH_CEfRwux1TpwiZZT4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbmZs/YWNpdHkuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI0LzA3/L0lORkxBQ0lUWS0y/MDBYNjUwLnBuZw" alt="Código de barras">
+       </div>
+   </div>
+   <div class="ticket-footer">
+       <p>¡Te esperamos para disfrutar de una noche increíble!</p>
+   </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 
 </html>
