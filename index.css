@@ -1,0 +1,230 @@
+/* Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+/* Definir variables de fuentes */
+:root {
+ --comic-font: "Comic Neue", serif;
+ --roboto-font: "Roboto Flex", serif;
+}
+
+/* Estilos globales */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-size: 1rem;
+}
+
+body {
+    font-family: var(--roboto-font);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #0c0c0c; /* Fondo claro en móviles */
+    cursor: url('images/cursor.png') 16 16, auto;
+}
+
+/* Header */
+header {
+ padding: 10px 0;
+ text-align: center;
+ font-family: var(--roboto-font);
+ border-bottom: 5px solid black;
+ color: white;
+ background-color: darkred;
+ width: 100%;
+}
+
+/* Fondo estilo cómic para las secciones */
+.section1, .section-card, .section-option {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.39), rgba(0, 0, 0, 0.205)); /* Fondo claro con textura */
+    background-image: url('https://www.transparenttextures.com/patterns/cartographer.png'); /* Añadir patrón de puntos estilo cómic */
+    background-size: 50px 50px; /* Tamaño del patrón */
+    /* color: #333; */
+    color: white;
+
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15); /* Sombra sutil para dar profundidad */
+    padding: 20px;
+    margin: 10px 0;
+
+}
+
+/* Sección 1 */
+.section1 {
+    text-align: center;
+    width: 100%;
+    padding: 20px; /* Asegura el mismo padding en todas las pantallas */
+}
+
+h1 {
+    padding-top: 50px;
+    font-size: 3.5rem;
+    position: relative;
+    font-family: var(--roboto-font);
+}
+
+h1 > span {
+    font-size: 5rem;
+    color: darkred;
+}
+
+h1 > img {
+    width: 40%;
+    height: auto;
+    position: relative;
+    top: 0;
+}
+
+/* Sección de la tarjeta */
+.section-card {
+ font-family: var(--comic-font);
+ padding: 10px 50px 20px 50px;
+ border-bottom: 5px solid darkred;
+ width: 100%;
+ text-align: center;
+}
+
+.section-card > img {
+ width: 100px; 
+ height: auto;
+ opacity: 55%;
+}
+
+.section-card > p {
+ font-size: 1.5rem;
+ font-weight: 800;
+}
+
+/* Sección de la opción */
+.section-option {
+ padding: 30px 0;
+ text-align: center;
+ width: 100%;
+}
+
+h3 {
+ font-family: var(--roboto-font);
+ font-size: 2rem;
+}
+
+h3 > img {
+ width: 60px;
+ height: auto;
+}
+
+h3 > span {
+ font-size: 2rem;
+ color: darkred;
+}
+
+/* Estilos para los botones */
+button {
+ width: 150px;
+ height: 50px;
+ font-size: 2rem;
+ font-family: var(--comic-font);
+ font-weight: 900;
+ border: none;
+ cursor: pointer;
+ margin: 10px; /* Espacio entre botones */
+ transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Estilo del botón "Si" */
+.btnSi {
+ background-color: yellow;
+ border-left: 10px solid black;
+ border-bottom: 8px solid black;
+ border-right: 3px solid black;
+ border-top: 3px solid black;
+}
+
+.btnSi:hover {
+ background-color: #d4c600; /* Tonalidad más oscura de amarillo */
+ border-left: 5px solid black; /* Hacer los bordes más pequeños */
+ border-bottom: 5px solid black; /* Hacer los bordes más pequeños */
+ border-right: 2px solid black; /* Hacer los bordes más pequeños */
+ border-top: 2px solid black; /* Hacer los bordes más pequeños */
+}
+
+/* Estilo del botón "No" */
+.btnNo {
+ background-color: red;
+ border-left: 10px solid black;
+ border-bottom: 8px solid black;
+ border-right: 3px solid black;
+ border-top: 3px solid black;
+}
+
+.btnNo:hover {
+ background-color: #c50000; /* Tonalidad más oscura de rojo */
+ border-left: 5px solid black; /* Hacer los bordes más pequeños */
+ border-bottom: 5px solid black; /* Hacer los bordes más pequeños */
+ border-right: 2px solid black; /* Hacer los bordes más pequeños */
+ border-top: 2px solid black; /* Hacer los bordes más pequeños */
+}
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column; /* Asegura que el contenido sea vertical */
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #dbdbdb; /* Fondo claro */
+        height: 100vh;
+    }
+    
+    .section1 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h1 > span {
+        font-size: 3rem;
+    }
+
+    h1 > img {
+        width: 60%;
+    }
+
+    .section-card {
+        padding: 10px 20px;
+    }
+
+    .section-option {
+        padding: 20px 0;
+    }
+
+    button {
+        width: 120px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Estilos para pantallas más grandes (pantallas de computadora) */
+@media (min-width: 769px) {
+    body {
+        background: linear-gradient(to right, #3d3d3d, #222222); /* Fondo con gradiente */
+        display: flex;
+        flex-direction: column; /* Asegura que el contenido sea vertical */
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .section1, .section-card, .section-option, header {
+        width: 25%; /* Centramos el contenido */
+        margin: 0 auto;
+    }
+}
